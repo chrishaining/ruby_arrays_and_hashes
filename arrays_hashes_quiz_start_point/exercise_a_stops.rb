@@ -15,11 +15,11 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 # stops.index("Cumbernauld")
 # stops.delete_at(1)
 # 7. How many stops there are in the array?
-#puts stops.length
+#puts stops.length #or could do stops.count or stops.size
 # 8. How many ways can we return `"Falkirk High"` from the array?
-#p stops[2]
+#p stops[2] #stops.fetch(2) stops.at(2) stops.slice(2) stops[-5]
 # 9. Reverse the positions of the stops in the array
-#p stops.sort
+#p stops.reverse
 # 10. Print out all the stops using a for loop
 for stop in stops
   p stop

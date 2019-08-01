@@ -56,24 +56,42 @@ users = {
 
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 # p users["Jonathan"][:twitter] #expects jonnyt - yay
+
 # 2. Get Erik's hometown
 #p users["Erik"][:home_town] #expects Linlithgow, and that's what I get
+
 # 3. Get the array of Erik's lottery numbers
 #p users["Erik"][:lottery_numbers] #yay
+
 # 4. Get the type of Avril's pet Monty
 # p users["Avril"][:pets][0][:species] #expects snake - not working, maybe because it's in an array
+
 # 5. Get the smallest of Erik's lottery numbers
-# p users["Erik"][:lottery_numbers].min #expects 8 - yay!
+# p users["Erik"][:lottery_numbers].min #expects 8 - yay! could also do .sort.first or .sort[0]
+
 # 6. Return an array of Avril's lottery numbers that are even
 # p users["Avril"][:lottery_numbers].select { |lottery_number| lottery_number % 2 == 0}
+=begin
+lottery_numbers = users["Avril"][:lottery_numbers]
+even_numbers = []
+for lottery_number in lottery_numbers
+ if lottery_number % 2 == 0
+ even_numbers.push(lottery_number)
+ end
+end
+p even_numbers
+=end
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 # p users["Erik"][:lottery_numbers].push(7) # yay
+
 # 8. Change Erik's hometown to Edinburgh
 # users["Erik"][:home_town] = "Edinburgh"
 # p users["Erik"][:home_town]
+
 # 9. Add a pet dog to Erik called "Fluffy"
 # users["Erik"][:pets].push({:name =>"Fluffy", :species => "dog"})
 # p users["Erik"][:pets]
+
 # 10. Add another person to the users hash
 
 #not sure how to add to a hash
@@ -104,3 +122,4 @@ users_2 = {
     }
 new_users=[users, users_2]
 p new_users
+#could use users.merge!(users_2)
